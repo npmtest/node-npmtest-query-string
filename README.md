@@ -1,7 +1,10 @@
-# test coverage for  [query-string (v4.3.2)](https://github.com/sindresorhus/query-string#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-query-string.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-query-string) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-query-string.svg)](https://travis-ci.org/npmtest/node-npmtest-query-string)
+# npmtest-query-string
+
+#### test coverage for  [query-string (v4.3.3)](https://github.com/sindresorhus/query-string#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-query-string.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-query-string) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-query-string.svg)](https://travis-ci.org/npmtest/node-npmtest-query-string)
+
 #### Parse and stringify URL query strings
 
-[![NPM](https://nodei.co/npm/query-string.png?downloads=true)](https://www.npmjs.com/package/query-string)
+[![NPM](https://nodei.co/npm/query-string.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/query-string)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-query-string/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-query-string/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-query-string/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-query-string/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-query-string/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-query-string/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-query-string/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-query-string/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-query-string/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-query-string/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-query-string%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-query-string/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-query-string/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-query-string/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-query-string/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-query-string%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-query-string/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-query-string/build/test-report.html](https://npmtest.github.io/node-npmtest-query-string/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-query-string/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-query-string/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-query-string/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-query-string/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-query-string/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-query-string/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-query-string/build/screenCapture.npmPackageListing.svg)
 
@@ -28,7 +37,6 @@
 {
     "author": {
         "name": "Sindre Sorhus",
-        "email": "sindresorhus@gmail.com",
         "url": "sindresorhus.com"
     },
     "bugs": {
@@ -45,8 +53,8 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "ec0fd765f58a50031a3968c2431386f8947a5cdd",
-        "tarball": "https://registry.npmjs.org/query-string/-/query-string-4.3.2.tgz"
+        "shasum": "91c90ff7173d9acd9e088b3cc223f9b437865692",
+        "tarball": "https://registry.npmjs.org/query-string/-/query-string-4.3.3.tgz"
     },
     "engines": {
         "node": ">=0.10.0"
@@ -54,7 +62,7 @@
     "files": [
         "index.js"
     ],
-    "gitHead": "bae3bb136152c10baed2070164e7c22312bc0594",
+    "gitHead": "9a0ba4b0715fa1af97e72792405988aa57ad0fa1",
     "homepage": "https://github.com/sindresorhus/query-string#readme",
     "keywords": [
         "browser",
@@ -74,13 +82,11 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "sindresorhus",
-            "email": "sindresorhus@gmail.com"
+            "name": "sindresorhus"
         }
     ],
     "name": "query-string",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sindresorhus/query-string.git"
@@ -88,7 +94,7 @@
     "scripts": {
         "test": "xo && ava"
     },
-    "version": "4.3.2"
+    "version": "4.3.3"
 }
 ```
 
