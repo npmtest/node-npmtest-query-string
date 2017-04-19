@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-query-string/query-string/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-query-string/node_modules/query-string/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-query-string">npmtest-query-string (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-query-string/query-string/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-query-string/node_modules/query-string/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">10.23% <small>(9 / 88)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-query-string/query-string/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-query-string/node_modules/query-string/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -626,11 +624,11 @@
 var strictUriEncode = require('strict-uri-encode');
 var objectAssign = require('object-assign');
 &nbsp;
-<span class="fstat-no" title="function not covered" >function encoderForArrayFormat(opts) {</span>
-<span class="cstat-no" title="statement not covered" >	switch (opts.arrayFormat) {</span>
+<span class="fstat-no" title="function not covered">function encoderForArrayFormat(opts) {</span>
+<span class="cstat-no" title="statement not covered">	switch (opts.arrayFormat) {</span>
 		case 'index':
-<span class="cstat-no" title="statement not covered" >			return <span class="fstat-no" title="function not covered" >function (key, value, index) {</span></span>
-<span class="cstat-no" title="statement not covered" >				return value === null ? [</span>
+<span class="cstat-no" title="statement not covered">			return <span class="fstat-no" title="function not covered">function (key, value, index) {</span></span>
+<span class="cstat-no" title="statement not covered">				return value === null ? [</span>
 					encode(key, opts),
 					'[',
 					index,
@@ -645,8 +643,8 @@ var objectAssign = require('object-assign');
 			};
 &nbsp;
 		case 'bracket':
-<span class="cstat-no" title="statement not covered" >			return <span class="fstat-no" title="function not covered" >function (key, value) {</span></span>
-<span class="cstat-no" title="statement not covered" >				return value === null ? encode(key, opts) : [</span>
+<span class="cstat-no" title="statement not covered">			return <span class="fstat-no" title="function not covered">function (key, value) {</span></span>
+<span class="cstat-no" title="statement not covered">				return value === null ? encode(key, opts) : [</span>
 					encode(key, opts),
 					'[]=',
 					encode(value, opts)
@@ -654,8 +652,8 @@ var objectAssign = require('object-assign');
 			};
 &nbsp;
 		default:
-<span class="cstat-no" title="statement not covered" >			return <span class="fstat-no" title="function not covered" >function (key, value) {</span></span>
-<span class="cstat-no" title="statement not covered" >				return value === null ? encode(key, opts) : [</span>
+<span class="cstat-no" title="statement not covered">			return <span class="fstat-no" title="function not covered">function (key, value) {</span></span>
+<span class="cstat-no" title="statement not covered">				return value === null ? encode(key, opts) : [</span>
 					encode(key, opts),
 					'=',
 					encode(value, opts)
@@ -664,173 +662,174 @@ var objectAssign = require('object-assign');
 	}
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function parserForArrayFormat(opts) {</span>
-<span class="cstat-no" title="statement not covered" >	var result;</span>
+<span class="fstat-no" title="function not covered">function parserForArrayFormat(opts) {</span>
+<span class="cstat-no" title="statement not covered">	var result;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	switch (opts.arrayFormat) {</span>
+<span class="cstat-no" title="statement not covered">	switch (opts.arrayFormat) {</span>
 		case 'index':
-<span class="cstat-no" title="statement not covered" >			return <span class="fstat-no" title="function not covered" >function (key, value, accumulator) {</span></span>
-<span class="cstat-no" title="statement not covered" >				result = /\[(\d*)\]$/.exec(key);</span>
+<span class="cstat-no" title="statement not covered">			return <span class="fstat-no" title="function not covered">function (key, value, accumulator) {</span></span>
+<span class="cstat-no" title="statement not covered">				result = /\[(\d*)\]$/.exec(key);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				key = key.replace(/\[\d*\]$/, '');</span>
+<span class="cstat-no" title="statement not covered">				key = key.replace(/\[\d*\]$/, '');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				if (!result) {</span>
-<span class="cstat-no" title="statement not covered" >					accumulator[key] = value;</span>
-<span class="cstat-no" title="statement not covered" >					return;</span>
+<span class="cstat-no" title="statement not covered">				if (!result) {</span>
+<span class="cstat-no" title="statement not covered">					accumulator[key] = value;</span>
+<span class="cstat-no" title="statement not covered">					return;</span>
 				}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				if (accumulator[key] === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >					accumulator[key] = {};</span>
+<span class="cstat-no" title="statement not covered">				if (accumulator[key] === undefined) {</span>
+<span class="cstat-no" title="statement not covered">					accumulator[key] = {};</span>
 				}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				accumulator[key][result[1]] = value;</span>
+<span class="cstat-no" title="statement not covered">				accumulator[key][result[1]] = value;</span>
 			};
 &nbsp;
 		case 'bracket':
-<span class="cstat-no" title="statement not covered" >			return <span class="fstat-no" title="function not covered" >function (key, value, accumulator) {</span></span>
-<span class="cstat-no" title="statement not covered" >				result = /(\[\])$/.exec(key);</span>
+<span class="cstat-no" title="statement not covered">			return <span class="fstat-no" title="function not covered">function (key, value, accumulator) {</span></span>
+<span class="cstat-no" title="statement not covered">				result = /(\[\])$/.exec(key);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				key = key.replace(/\[\]$/, '');</span>
+<span class="cstat-no" title="statement not covered">				key = key.replace(/\[\]$/, '');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				if (!result || accumulator[key] === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >					accumulator[key] = value;</span>
-<span class="cstat-no" title="statement not covered" >					return;</span>
+<span class="cstat-no" title="statement not covered">				if (!result || accumulator[key] === undefined) {</span>
+<span class="cstat-no" title="statement not covered">					accumulator[key] = [value];</span>
+<span class="cstat-no" title="statement not covered">					return;</span>
 				}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				accumulator[key] = [].concat(accumulator[key], value);</span>
+<span class="cstat-no" title="statement not covered">				accumulator[key] = [].concat(accumulator[key], value);</span>
 			};
 &nbsp;
 		default:
-<span class="cstat-no" title="statement not covered" >			return <span class="fstat-no" title="function not covered" >function (key, value, accumulator) {</span></span>
-<span class="cstat-no" title="statement not covered" >				if (accumulator[key] === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >					accumulator[key] = value;</span>
-<span class="cstat-no" title="statement not covered" >					return;</span>
+<span class="cstat-no" title="statement not covered">			return <span class="fstat-no" title="function not covered">function (key, value, accumulator) {</span></span>
+<span class="cstat-no" title="statement not covered">				if (accumulator[key] === undefined) {</span>
+<span class="cstat-no" title="statement not covered">					accumulator[key] = value;</span>
+<span class="cstat-no" title="statement not covered">					return;</span>
 				}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				accumulator[key] = [].concat(accumulator[key], value);</span>
+<span class="cstat-no" title="statement not covered">				accumulator[key] = [].concat(accumulator[key], value);</span>
 			};
 	}
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function encode(value, opts) {</span>
-<span class="cstat-no" title="statement not covered" >	if (opts.encode) {</span>
-<span class="cstat-no" title="statement not covered" >		return opts.strict ? strictUriEncode(value) : encodeURIComponent(value);</span>
+<span class="fstat-no" title="function not covered">function encode(value, opts) {</span>
+<span class="cstat-no" title="statement not covered">	if (opts.encode) {</span>
+<span class="cstat-no" title="statement not covered">		return opts.strict ? strictUriEncode(value) : encodeURIComponent(value);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return value;</span>
+<span class="cstat-no" title="statement not covered">	return value;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function keysSorter(input) {</span>
-<span class="cstat-no" title="statement not covered" >	if (Array.isArray(input)) {</span>
-<span class="cstat-no" title="statement not covered" >		return input.sort();</span>
-	} else <span class="cstat-no" title="statement not covered" >if (typeof input === 'object') {</span>
-<span class="cstat-no" title="statement not covered" >		return keysSorter(Object.keys(input)).sort(<span class="fstat-no" title="function not covered" >function (a, b) {</span></span>
-<span class="cstat-no" title="statement not covered" >			return Number(a) - Number(b);</span>
-		}).map(<span class="fstat-no" title="function not covered" >function (key) {</span>
-<span class="cstat-no" title="statement not covered" >			return input[key];</span>
+<span class="fstat-no" title="function not covered">function keysSorter(input) {</span>
+<span class="cstat-no" title="statement not covered">	if (Array.isArray(input)) {</span>
+<span class="cstat-no" title="statement not covered">		return input.sort();</span>
+	} else <span class="cstat-no" title="statement not covered">if (typeof input === 'object') {</span>
+<span class="cstat-no" title="statement not covered">		return keysSorter(Object.keys(input)).sort(<span class="fstat-no" title="function not covered">function (a, b) {</span></span>
+<span class="cstat-no" title="statement not covered">			return Number(a) - Number(b);</span>
+		}).map(<span class="fstat-no" title="function not covered">function (key) {</span>
+<span class="cstat-no" title="statement not covered">			return input[key];</span>
 		});
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return input;</span>
+<span class="cstat-no" title="statement not covered">	return input;</span>
 }
 &nbsp;
-exports.extract = <span class="fstat-no" title="function not covered" >function (str) {</span>
-<span class="cstat-no" title="statement not covered" >	return str.split('?')[1] || '';</span>
+exports.extract = <span class="fstat-no" title="function not covered">function (str) {</span>
+<span class="cstat-no" title="statement not covered">	return str.split('?')[1] || '';</span>
 };
 &nbsp;
-exports.parse = <span class="fstat-no" title="function not covered" >function (str, opts) {</span>
-<span class="cstat-no" title="statement not covered" >	opts = objectAssign({arrayFormat: 'none'}, opts);</span>
+exports.parse = <span class="fstat-no" title="function not covered">function (str, opts) {</span>
+<span class="cstat-no" title="statement not covered">	opts = objectAssign({arrayFormat: 'none'}, opts);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var formatter = parserForArrayFormat(opts);</span>
+<span class="cstat-no" title="statement not covered">	var formatter = parserForArrayFormat(opts);</span>
 &nbsp;
 	// Create an object with no prototype
 	// https://github.com/sindresorhus/query-string/issues/47
-<span class="cstat-no" title="statement not covered" >	var ret = Object.create(null);</span>
+<span class="cstat-no" title="statement not covered">	var ret = Object.create(null);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (typeof str !== 'string') {</span>
-<span class="cstat-no" title="statement not covered" >		return ret;</span>
+<span class="cstat-no" title="statement not covered">	if (typeof str !== 'string') {</span>
+<span class="cstat-no" title="statement not covered">		return ret;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	str = str.trim().replace(/^(\?|#|&amp;)/, '');</span>
+<span class="cstat-no" title="statement not covered">	str = str.trim().replace(/^(\?|#|&amp;)/, '');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (!str) {</span>
-<span class="cstat-no" title="statement not covered" >		return ret;</span>
+<span class="cstat-no" title="statement not covered">	if (!str) {</span>
+<span class="cstat-no" title="statement not covered">		return ret;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	str.split('&amp;').forEach(<span class="fstat-no" title="function not covered" >function (param) {</span></span>
-<span class="cstat-no" title="statement not covered" >		var parts = param.replace(/\+/g, ' ').split('=');</span>
+<span class="cstat-no" title="statement not covered">	str.split('&amp;').forEach(<span class="fstat-no" title="function not covered">function (param) {</span></span>
+<span class="cstat-no" title="statement not covered">		var parts = param.replace(/\+/g, ' ').split('=');</span>
 		// Firefox (pre 40) decodes `%3D` to `=`
 		// https://github.com/sindresorhus/query-string/pull/37
-<span class="cstat-no" title="statement not covered" >		var key = parts.shift();</span>
-<span class="cstat-no" title="statement not covered" >		var val = parts.length &gt; 0 ? parts.join('=') : undefined;</span>
+<span class="cstat-no" title="statement not covered">		var key = parts.shift();</span>
+<span class="cstat-no" title="statement not covered">		var val = parts.length &gt; 0 ? parts.join('=') : undefined;</span>
 &nbsp;
 		// missing `=` should be `null`:
 		// http://w3.org/TR/2012/WD-url-20120524/#collect-url-parameters
-<span class="cstat-no" title="statement not covered" >		val = val === undefined ? null : decodeURIComponent(val);</span>
+<span class="cstat-no" title="statement not covered">		val = val === undefined ? null : decodeURIComponent(val);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		formatter(decodeURIComponent(key), val, ret);</span>
+<span class="cstat-no" title="statement not covered">		formatter(decodeURIComponent(key), val, ret);</span>
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return Object.keys(ret).sort().reduce(<span class="fstat-no" title="function not covered" >function (result, key) {</span></span>
-<span class="cstat-no" title="statement not covered" >		var val = ret[key];</span>
-<span class="cstat-no" title="statement not covered" >		if (Boolean(val) &amp;&amp; typeof val === 'object' &amp;&amp; !Array.isArray(val)) {</span>
+<span class="cstat-no" title="statement not covered">	return Object.keys(ret).sort().reduce(<span class="fstat-no" title="function not covered">function (result, key) {</span></span>
+<span class="cstat-no" title="statement not covered">		var val = ret[key];</span>
+<span class="cstat-no" title="statement not covered">		if (Boolean(val) &amp;&amp; typeof val === 'object' &amp;&amp; !Array.isArray(val)) {</span>
 			// Sort object keys, not values
-<span class="cstat-no" title="statement not covered" >			result[key] = keysSorter(val);</span>
+<span class="cstat-no" title="statement not covered">			result[key] = keysSorter(val);</span>
 		} else {
-<span class="cstat-no" title="statement not covered" >			result[key] = val;</span>
+<span class="cstat-no" title="statement not covered">			result[key] = val;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return result;</span>
+<span class="cstat-no" title="statement not covered">		return result;</span>
 	}, Object.create(null));
 };
 &nbsp;
-exports.stringify = <span class="fstat-no" title="function not covered" >function (obj, opts) {</span>
-<span class="cstat-no" title="statement not covered" >	var defaults = {</span>
+exports.stringify = <span class="fstat-no" title="function not covered">function (obj, opts) {</span>
+<span class="cstat-no" title="statement not covered">	var defaults = {</span>
 		encode: true,
 		strict: true,
 		arrayFormat: 'none'
 	};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	opts = objectAssign(defaults, opts);</span>
+<span class="cstat-no" title="statement not covered">	opts = objectAssign(defaults, opts);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	var formatter = encoderForArrayFormat(opts);</span>
+<span class="cstat-no" title="statement not covered">	var formatter = encoderForArrayFormat(opts);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return obj ? Object.keys(obj).sort().map(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
-<span class="cstat-no" title="statement not covered" >		var val = obj[key];</span>
+<span class="cstat-no" title="statement not covered">	return obj ? Object.keys(obj).sort().map(<span class="fstat-no" title="function not covered">function (key) {</span></span>
+<span class="cstat-no" title="statement not covered">		var val = obj[key];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (val === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >			return '';</span>
+<span class="cstat-no" title="statement not covered">		if (val === undefined) {</span>
+<span class="cstat-no" title="statement not covered">			return '';</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (val === null) {</span>
-<span class="cstat-no" title="statement not covered" >			return encode(key, opts);</span>
+<span class="cstat-no" title="statement not covered">		if (val === null) {</span>
+<span class="cstat-no" title="statement not covered">			return encode(key, opts);</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (Array.isArray(val)) {</span>
-<span class="cstat-no" title="statement not covered" >			var result = [];</span>
+<span class="cstat-no" title="statement not covered">		if (Array.isArray(val)) {</span>
+<span class="cstat-no" title="statement not covered">			var result = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			val.slice().forEach(<span class="fstat-no" title="function not covered" >function (val2) {</span></span>
-<span class="cstat-no" title="statement not covered" >				if (val2 === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >					return;</span>
+<span class="cstat-no" title="statement not covered">			val.slice().forEach(<span class="fstat-no" title="function not covered">function (val2) {</span></span>
+<span class="cstat-no" title="statement not covered">				if (val2 === undefined) {</span>
+<span class="cstat-no" title="statement not covered">					return;</span>
 				}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >				result.push(formatter(key, val2, result.length));</span>
+<span class="cstat-no" title="statement not covered">				result.push(formatter(key, val2, result.length));</span>
 			});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			return result.join('&amp;');</span>
+<span class="cstat-no" title="statement not covered">			return result.join('&amp;');</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return encode(key, opts) + '=' + encode(val, opts);</span>
-	}).filter(<span class="fstat-no" title="function not covered" >function (x) {</span>
-<span class="cstat-no" title="statement not covered" >		return x.length &gt; 0;</span>
+<span class="cstat-no" title="statement not covered">		return encode(key, opts) + '=' + encode(val, opts);</span>
+	}).filter(<span class="fstat-no" title="function not covered">function (x) {</span>
+<span class="cstat-no" title="statement not covered">		return x.length &gt; 0;</span>
 	}).join('&amp;') : '';
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 14:59:22 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 06:20:49 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
